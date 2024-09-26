@@ -24,7 +24,7 @@ const TimestampAction = () => {
         currentTime >= action.time ? (
           <div key={index} className="w-full md:w-auto">
             {action.type === 'button' ? (
-              <button className="bg-[#D1A84E] rounded-md w-full text-black p-2">
+              <button className="bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] rounded-md w-full text-black p-2">
                 <a
                   href="https://artedasmilhas.com.br"
                   target="_blank"

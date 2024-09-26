@@ -10,7 +10,7 @@ const CountdownTimer = () => {
     const totalHours = days * 24 + hours;
 
     return (
-      <div className="text-center bg-clip-text text-transparent bg-gradient-to-br to-[#D1A84E] from-[#BC9858] text-4xl font-mono font-bold">
+      <div className="text-center bg-clip-text text-transparent bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] text-4xl font-mono font-bold">
         <h1 className="text-center text-lg md:text-xl font-bold ">
           Nossa oferta especial termina em
         </h1>
