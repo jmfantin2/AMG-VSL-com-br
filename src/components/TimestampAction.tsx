@@ -1,17 +1,28 @@
-// components/TimestampAction.tsx
 import { useState } from 'react';
 import { useVideo } from '../hooks/useVideo';
 import shapeshifter from 'classnames';
 
 interface Action {
-  time: number;
-  type: 'button' | 'coupon';
+  timeIn: number; // When the action should appear
+  timeOut: number; // When the action should disappear
+  type: 'button' | 'coupon' | 'notice'; // Added 'notice' type
   content: string;
 }
 
 const actions: Action[] = [
-  { time: 4, type: 'button', content: 'Clique aqui para mais informações' },
-  { time: 2, type: 'coupon', content: 'BEMVINDOAMG' },
+  {
+    timeIn: 15,
+    timeOut: 60,
+    type: 'button',
+    content: 'Esse botão entra em 15 e sai em 60',
+  },
+  { timeIn: 15, timeOut: 45, type: 'coupon', content: 'BEMVINDOAMG' },
+  {
+    timeIn: 3,
+    timeOut: 15,
+    type: 'notice',
+    content: 'Esse aviso entra em 3 e sai em 15.',
+  },
 ];
 
 const TimestampAction = () => {
@@ -21,7 +32,7 @@ const TimestampAction = () => {
   return (
     <div className="items-center justify-center flex flex-col md:flex-row gap-4">
       {actions.map((action, index) =>
-        currentTime >= action.time ? (
+        currentTime >= action.timeIn && currentTime <= action.timeOut ? (
           <div key={index} className="w-full md:w-auto">
             {action.type === 'button' ? (
               <button className="bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] rounded-md w-full text-black p-2">
@@ -33,7 +44,7 @@ const TimestampAction = () => {
                   {action.content}
                 </a>
               </button>
-            ) : (
+            ) : action.type === 'coupon' ? (
               <button
                 onClick={() => {
                   setCouponButtonClicked(true);
@@ -56,6 +67,11 @@ const TimestampAction = () => {
                   </>
                 )}
               </button>
+            ) : (
+              // Render for "notice" type
+              <div className="text-[#E1D48F] p-2 text-xl rounded-md">
+                {action.content}
+              </div>
             )}
           </div>
         ) : null
