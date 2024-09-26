@@ -8,8 +8,8 @@ interface Action {
 }
 
 const actions: Action[] = [
-  { time: 5, type: 'button', content: 'Clique aqui para mais informações' },
-  { time: 30, type: 'coupon', content: 'CUPOM50' },
+  { time: 15, type: 'button', content: 'Clique aqui para mais informações' },
+  { time: 10, type: 'coupon', content: 'BEMVINDOAMG' },
 ];
 
 const TimestampAction = () => {
@@ -21,11 +21,11 @@ const TimestampAction = () => {
         currentTime >= action.time ? (
           <div key={index} className="my-2">
             {action.type === 'button' ? (
-              <button className="bg-blue-500 text-white p-2 rounded">
+              <button className="bg-transparent rounded-md border-2 border-[#D1A84E] text-white p-2">
                 {action.content}
               </button>
             ) : (
-              <div className="text-white">
+              <div className="text-white p-2">
                 Copie o cupom:{' '}
                 <span className="font-bold">{action.content}</span>
               </div>

@@ -10,9 +10,14 @@ const CountdownTimer = () => {
     const totalHours = days * 24 + hours;
 
     return (
-      <div className="text-center text-white text-2xl">
-        {/* Show total hours (days converted to hours) */}
-        {zeroPad(totalHours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+      <div className="text-center bg-clip-text text-transparent bg-gradient-to-br to-[#D1A84E] from-[#BC9858] text-4xl font-mono font-bold">
+        <h1 className="text-center text-lg md:text-xl font-bold ">
+          Nossa oferta especial termina em
+        </h1>
+        <h2 className="text-4xl md:text-6xl">
+          {/* Show total hours (days converted to hours) */}
+          {zeroPad(totalHours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+        </h2>
       </div>
     );
   };
