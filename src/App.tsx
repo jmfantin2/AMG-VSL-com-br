@@ -32,7 +32,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Footer */}
-        <footer className="fixed bottom-0 w-full py-4 gap-2 bg-[#151515] text-center items-center justify-center flex flex-col">
+        <footer className="fixed bottom-0 w-full py-4 gap-2 bg-[#151716] text-center items-center justify-center flex flex-col">
           <img
             src="/images/AMG-SITE-LOGO-BORDER-FIX.jpeg"
             alt=""
