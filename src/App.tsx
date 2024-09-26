@@ -4,10 +4,12 @@ import CountdownTimer from './components/Countdown';
 import VideoPlayer from './components/VideoPlayer';
 import TimestampAction from './components/TimestampAction';
 import { VideoProvider } from './contexts/VideoContext';
+import { RingLoader } from './components/RingLoader';
 
 const App: React.FC = () => {
   return (
     <VideoProvider>
+      <RingLoader mode="fullpage" />
       <div className="min-h-screen flex flex-col bg-GRID text-white">
         {/* Top Section with Countdown Timer */}
         <div className="w-full py-4">
