@@ -51,6 +51,7 @@ const VideoPlayer = () => {
           onClick={toggleMute}
         >
           <HiVolumeOff size={24} color="white" />
+          <p className="ml-2">Toque para ativar o som</p>
         </button>
       )}
 
