@@ -11,10 +11,10 @@ const CountdownTimer = () => {
 
     return (
       <div className="text-center bg-clip-text text-transparent bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] text-4xl font-mono font-bold">
-        <h1 className="text-center text-lg md:text-xl font-bold ">
+        <h1 className="text-center text-lg font-bold ">
           Nossa oferta especial termina em
         </h1>
-        <h2 className="text-4xl md:text-6xl">
+        <h2 className="text-4xl">
           {/* Show total hours (days converted to hours) */}
           {zeroPad(totalHours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
         </h2>

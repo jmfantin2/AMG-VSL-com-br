@@ -27,11 +27,11 @@ const VideoPlayer = () => {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center bg-black">
-      {/* ReactPlayer with full width and height */}
+      {/* ReactPlayer with full width and height*/}
       <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
         <ReactPlayer
           ref={playerRef}
-          url="https://www.youtube.com/watch?v=sbiJkP-fxmg"
+          url="https://www.youtube.com/watch?v=tq8GViHGut4"
           playing
           muted={isMuted}
           controls={false}
