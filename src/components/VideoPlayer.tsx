@@ -47,11 +47,11 @@ const VideoPlayer = () => {
       {/* Mute/Unmute Button with Icon */}
       {isMuted && (
         <button
-          className="absolute bottom-4 right-4 z-20 p-2 bg-red-500 text-red flex items-center justify-center"
+          className="absolute bottom-4 right-4 z-20 p-2 bg-red-500 text-white flex items-center justify-center"
           onClick={toggleMute}
         >
-          <HiVolumeOff size={24} color="white" />
-          <p className="ml-2">Toque para ativar o som</p>
+          <HiVolumeOff size={34} color="white" />
+          <p className="ml-2 text-xl">Toque para ativar o som</p>
         </button>
       )}
 

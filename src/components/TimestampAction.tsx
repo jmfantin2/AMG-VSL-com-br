@@ -11,17 +11,23 @@ interface Action {
 
 const actions: Action[] = [
   {
-    timeIn: 15,
-    timeOut: 60,
+    timeIn: 120,
+    timeOut: 600,
     type: 'button',
-    content: 'Esse botão entra em 15 e sai em 60',
+    content: 'Confira nossos planos!',
   },
-  { timeIn: 15, timeOut: 45, type: 'coupon', content: 'BEMVINDOAMG' },
+  { timeIn: 120, timeOut: 600, type: 'coupon', content: 'BEMVINDOAMG' },
   {
-    timeIn: 3,
-    timeOut: 15,
+    timeIn: 60,
+    timeOut: 120,
     type: 'notice',
-    content: 'Esse aviso entra em 3 e sai em 15.',
+    content: 'O cupom aparecerá em 1 minuto.',
+  },
+  {
+    timeIn: 0,
+    timeOut: 60,
+    type: 'notice',
+    content: 'O cupom aparecerá em 2 minutos.',
   },
 ];
 
@@ -35,15 +41,15 @@ const TimestampAction = () => {
         currentTime >= action.timeIn && currentTime <= action.timeOut ? (
           <div key={index} className="w-full md:w-auto">
             {action.type === 'button' ? (
-              <button className="bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] rounded-md w-full text-black p-2">
-                <a
-                  href="https://artedasmilhas.com.br"
-                  target="_blank"
-                  className="w-full"
-                >
+              <a
+                href="https://artedasmilhas.com.br/#planos"
+                target="_blank"
+                className="w-full"
+              >
+                <button className="bg-gradient-to-br from-[#E1D48F] to-[#D1A84E] rounded-md w-full text-black p-2">
                   {action.content}
-                </a>
-              </button>
+                </button>
+              </a>
             ) : action.type === 'coupon' ? (
               <button
                 onClick={() => {
