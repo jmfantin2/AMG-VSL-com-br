@@ -15,7 +15,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ duration }) => {
     <div className="w-full bg-gray-700 h-2 opacity-60 overflow-hidden">
       <div
         className="bg-[#D1A84E] h-2"
-        style={{ width: `${progressPercentage * 3}%` }}
+        style={{ width: `${progressPercentage * 2}%` }}
       />
     </div>
   );
