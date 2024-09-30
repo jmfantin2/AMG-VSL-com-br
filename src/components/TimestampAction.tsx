@@ -11,21 +11,21 @@ interface Action {
 
 const actions: Action[] = [
   {
-    timeIn: 120,
+    timeIn: 150,
     timeOut: 600,
     type: 'button',
     content: 'Confira nossos planos!',
   },
-  { timeIn: 120, timeOut: 600, type: 'coupon', content: 'BEMVINDOAMG' },
+  { timeIn: 150, timeOut: 600, type: 'coupon', content: 'BEMVINDOAMG' },
   {
-    timeIn: 60,
-    timeOut: 120,
+    timeIn: 75,
+    timeOut: 150,
     type: 'notice',
     content: 'O cupom aparecerá em 1 minuto.',
   },
   {
     timeIn: 0,
-    timeOut: 60,
+    timeOut: 75,
     type: 'notice',
     content: 'O cupom aparecerá em 2 minutos.',
   },
