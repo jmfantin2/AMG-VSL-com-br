@@ -41,6 +41,7 @@ const VideoPlayer = () => {
           height="100%"
         />
         {/* Z-layer to block interaction <div className="absolute inset-0 z-10" />*/}
+        <div className="absolute inset-0 z-10" />
       </div>
 
       {/* Mute/Unmute Button with Icon */}
