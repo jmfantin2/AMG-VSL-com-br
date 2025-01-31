@@ -2,13 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Countdown, { CountdownRendererFn, zeroPad } from 'react-countdown';
 
 const CountdownTimer = () => {
-<<<<<<< HEAD
   const rangeInMilliseconds = 5 * 24 * 60 * 60 * 1000; // 5 days in milliseconds
   const [countdownDate, setCountdownDate] = useState<Date | null>(null);
-=======
-  // Set the countdown date to Oct 5, 2024
-  const countdownDate = new Date('2025-01-28T00:00:00');
->>>>>>> 69da647959cdfe6638be68c46a66fca8138ce288
 
   useEffect(() => {
     // Seed date to initialize the countdown cycle
