@@ -26,7 +26,7 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center bg-black">
+    <div className="relative w-full max-w-2xl mx-auto flex flex-col items-center bg-black">
       {/* ReactPlayer with full width and height*/}
       <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
         <ReactPlayer
