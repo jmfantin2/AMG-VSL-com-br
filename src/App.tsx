@@ -39,7 +39,7 @@ const App: React.FC = () => {
             className="max-w-56"
           />
           <p className="text-sm text-gray-400">
-            © 2024 Arte das Milhas Gestão
+            © 2025 Arte das Milhas Gestão
             <br />
             Todos os direitos reservados.
           </p>
